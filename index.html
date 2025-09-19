@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            max-width: 66vw;
+            padding: 2rem 1rem;
+            margin: 0 auto;
+            background-color: white;
+          }
+          .header_container{
+            margin-bottom: 2.8rem;
+            text-align: center;
+          }
+          .header_title{
+            margin-bottom: 1 rem;
+            font-size: 1.7rem;
+            line-height: 2rem;
+            font-weight: 700;
+            text-align: center;
+          }
+          .header_desc{
+            max-width: 568px;
+            margin: 0 auto;
+            color: rgb(105, 97, 97);
+          }
+          .main_container{
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1,1fr);
+          }
+          @media (min-width:650px){
+            .main_container{
+                grid-template-columns:  repeat(2,1fr);
+            }
+          }
+
+           @media (min-width:1080px){
+            .main_container{
+                grid-template-columns:  repeat(3,1fr);
+            }
+          }
+
+           @media (min-width:1340px){
+            .main_container{
+                grid-template-columns:  repeat(4,1fr);
+            }
+          }
+          .card_container{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(111, 110, 110);
+            border-radius: 8px;
+
+          }
+          .card_image_container{
+            position: relative;
+            overflow: hidden;
+            height: 14rem;
+          }
+          @media(min-width: 768px){
+            .card_image_container{
+                height: 16rem;
+            }
+          }
+          .card_image{
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            height: 100%;
+            width: 1005;
+          }
+          .card_title_container{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+          }
+          .card_container:hover .card_image{
+            transform: scale(0.8);
+            transition-duration: 200ms;
+          }
+          .card_title{
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            margin-bottom: 0.3rem;
+            color: rgb(26, 24, 24);
+          }
+          .card_title_anchor:hover .card_title{
+            color: rgb(67, 67, 212);
+          }
+          .card_desc{
+            color: rgb(113, 107, 107);
+            font-size: 1rem;
+          }
+          .card_footer_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 1.1rem;
+          }
+          .author_container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+          }
+          .author_avatar_container{
+            height: 2.5rem;
+            width: 2.5rem;
+            overflow: hidden;
+            border:1px solid rgb(150, 147, 147);
+            border-radius: 50%;
+            background-color: rgb(243, 239, 239);
+          }
+          .author_info_container{
+            display: flex;
+            flex-direction: column;
+
+          }
+          .author_name{
+            color: rgb(38,38,149);
+
+          }
+          .author_date{
+            color: rgb(136, 126, 126);
+          }
+          .card_tag_container{
+            font-size: 0.9rem;
+            border: 1px solid rgb(76, 71, 71);
+            border-radius: 2px;
+            line-height: 1.3rem; 
+            padding: 0.25rem 0.5rem;
+            color: grey;
+          }
+    </style>
+</head>
+<body>
+    <div class="body_container">
+        <div class="container">
+            <header class="header_container">
+                <h1 class="header_title">CodeCraft Blogs</h1>
+                <p class="header_desc"> Utilize this space to incorporating a captivating subheading
+                    crafted by chatgpt, adding depth and intrigue toyour blog.
+                 </p>
+            </header>
+            <main class="main_container">
+                <!-- card 1 start -->
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+                 <!-- card 1 ends here -->
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3/nutrition
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">Nutrition</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?technology
+                        
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+
+                 <div class="card_container">
+                    <a href="#" class="card_image_container">
+                        <img src="https://picsum.photos/400/250?random=3
+"
+                        alt="card 1 image"
+                        class="card_image"
+                        loading="lazy"
+                        />
+
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New Gadgets</h2>
+                        </a>
+                        <p class="card_desc">
+                            Check out the latest gadget hittin the market nowadays.
+                        </p>
+
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                loading="lazy"
+                                class="authot_avatar"
+                                alt="avatar 1"
+                                />
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">
+                                    John Doe
+                                </span>
+                                
+                                <span class="author_date">
+                                    Sept 19, 2021
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="card_tag_container">
+                            <span>
+                                Technology
+                            </span>
+                        </div>
+
+                    </div>
+                 </div>
+
+
+
+            </main>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
